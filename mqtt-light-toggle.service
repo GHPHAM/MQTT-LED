@@ -1,0 +1,11 @@
+[Unit]
+Description=Toggle MQTT Light
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/toggle-mqtt-light.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target

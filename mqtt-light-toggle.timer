@@ -1,0 +1,11 @@
+[Unit]
+Description=Toggle MQTT Light Every 10 Seconds
+Requires=mqtt-light-toggle.service
+
+[Timer]
+Unit=mqtt-light-toggle.service
+OnBootSec=30s
+OnUnitActiveSec=10s
+
+[Install]
+WantedBy=timers.target
